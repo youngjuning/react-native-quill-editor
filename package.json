@@ -1,0 +1,19 @@
+{
+  "name": "react-native-quill-wrapper",
+  "version": "1.0.0",
+  "description": "React Native Quill Rich Text Editor Wrapper",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wml start",
+    "wml:add": "wml add ./",
+    "wml:clean":"watchman watch-del-all"
+  },
+  "homepage": "https://github.com/bitchon/react-native-quill-wrapper",
+  "repository": "git@github.com:bitchon/react-native-quill-wrapper.git",
+  "author": {
+    "name": "杨俊宁",
+    "email": "1003719811@qq.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT"
+}
