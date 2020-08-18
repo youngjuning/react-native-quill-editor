@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "wml start",
     "wml:add": "wml add ./",
-    "wml:clean":"watchman watch-del-all"
+    "wml:clean": "watchman watch-del-all"
   },
   "homepage": "https://github.com/bitchon/react-native-quill-wrapper",
   "repository": "git@github.com:bitchon/react-native-quill-wrapper.git",
@@ -15,5 +15,23 @@
     "email": "1003719811@qq.com",
     "url": "https://youngjuning.js.org"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{less,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@youngjuning/eslint-config-airbnb": "^0.4.0",
+    "lint-staged": "^10.2.11",
+    "yorkie": "^2.0.0"
+  }
 }
