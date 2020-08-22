@@ -1,12 +1,13 @@
 {
   "name": "react-native-quill-wrapper",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "React Native Quill Rich Text Editor Wrapper",
-  "main": "index.js",
+  "main": "./src/index.tsx",
   "scripts": {
-    "dev": "wml start",
-    "wml:add": "wml add ./",
-    "wml:clean": "watchman watch-del-all"
+    "wml:add": "wml add ./ ./Example/node_modules/@bitchon/react-native-quill-wrapper/",
+    "wml:clean": "watchman watch-del-all",
+    "android": "wml start && cd ./Example && yarn run:android && cd ../",
+    "ios": "cd ./Example && yarn ios && cd ../ && wml start"
   },
   "homepage": "https://github.com/bitchon/react-native-quill-wrapper",
   "repository": "git@github.com:bitchon/react-native-quill-wrapper.git",
