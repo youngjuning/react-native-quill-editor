@@ -2,11 +2,11 @@
   "name": "react-native-quill-wrapper",
   "version": "0.0.1",
   "description": "React Native Quill Rich Text Editor Wrapper",
-  "main": "./src/index.tsx",
+  "main": "./index.tsx",
   "scripts": {
     "wml:add": "wml add ./ ./Example/node_modules/@bitchon/react-native-quill-wrapper/",
     "wml:clean": "watchman watch-del-all",
-    "android": "wml start && cd ./Example && yarn run:android && cd ../",
+    "android": "cd ./Example && yarn android && cd ../  && wml start",
     "ios": "cd ./Example && yarn ios && cd ../ && wml start"
   },
   "homepage": "https://github.com/bitchon/react-native-quill-wrapper",
@@ -36,5 +36,8 @@
     "@youngjuning/eslint-config-airbnb": "^0.4.0",
     "lint-staged": "^10.2.11",
     "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "react-native-webview": "^10.7.0"
   }
 }
