@@ -5,13 +5,15 @@ React Native Quill Rich Text Editor Wrapper
 ## Install
 
 ```sh
-$ yarn add @bitchon/react-native-quill-wrapper
+$ yarn add react-native-quill-wrapper
 ```
+
+Make sure you installed [react-native-webview](https://github.com/react-native-community/react-native-webview)
 
 ## Usage
 
 ```jsx
-import Quill from '@bitchon/react-native-quill-wrapper'
+import Quill from 'react-native-quill-wrapper'
 
 const App = () => {
   const onChange = (html: string) => {
