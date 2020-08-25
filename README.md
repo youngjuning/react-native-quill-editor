@@ -14,6 +14,9 @@ $ yarn add @bitchon/react-native-quill-wrapper
 import Quill from '@bitchon/react-native-quill-wrapper'
 
 const App = () => {
-  return <Quill style={{ height: 300 }} />
+  const onChange = (html: string) => {
+    console.log(html)
+  }
+  return <Quill style={{ height: 300 }} placeholder="请赋诗一首..." onChange={onChange} />
 }
 ```

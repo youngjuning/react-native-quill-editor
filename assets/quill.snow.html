@@ -991,11 +991,12 @@
       },
     })
     quill.on('text-change', function(delta, oldDelta, source) {
-      if (source == 'api') {
-        window.ReactNativeWebView.postMessage("An API call triggered this change.")
-      } else if (source == 'user') {
-        window.ReactNativeWebView.postMessage("A user action triggered this change.")
+      const html = document.querySelector('#editor').children[0].innerHTML
+      const message = {
+        type: 'onChange',
+        html,
       }
+      window.ReactNativeWebView.postMessage(JSON.stringify(message))
     });
   </script>
 </body>
