@@ -12,7 +12,14 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <Quill style={{ height: 300 }} value={value} onChange={onChange} placeholder="请赋诗一首..." />
+          <Quill
+            style={{ height: 300 }}
+            value={value}
+            onChange={onChange}
+            options={{
+              placeholder: '请赋诗一首...',
+            }}
+          />
         </ScrollView>
       </SafeAreaView>
     </View>
