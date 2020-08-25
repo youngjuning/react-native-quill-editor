@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SafeAreaView, StyleSheet, ScrollView, StatusBar, View } from 'react-native'
-import Quill from '@bitchon/react-native-quill-wrapper'
+import Quill from 'react-native-quill-wrapper'
 
 const App = () => {
   const [value, setValue] = useState('')

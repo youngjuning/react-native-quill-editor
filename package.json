@@ -5,7 +5,7 @@
   "main": "./index.tsx",
   "scripts": {
     "postinstall": "cpy 'assets/quill.html' '../../android/app/src/main/assets/'",
-    "wml:add": "wml add ./ ./Example/node_modules/@bitchon/react-native-quill-wrapper/",
+    "wml:add": "wml add ./ ./Example/node_modules/react-native-quill-wrapper/",
     "wml:clean": "watchman watch-del-all",
     "android": "cd ./Example && yarn android && cd ../  && wml start",
     "ios": "cd ./Example && yarn ios && cd ../ && wml start"
