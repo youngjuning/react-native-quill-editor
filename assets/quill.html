@@ -979,7 +979,7 @@
   </script>
   <!-- Initialize Quill editor -->
   <script>
-    var quill = new Quill('#editor', {
+    let options = {
       theme: 'snow',
       placeholder: '请输入...',
       modules: {
@@ -989,12 +989,13 @@
           ['image', 'code-block']
         ]
       },
-    })
+    }
+    const quill = new Quill('#editor', options)
     quill.on('text-change', function(delta, oldDelta, source) {
       const html = document.querySelector('#editor').children[0].innerHTML
       const message = {
         type: 'onChange',
-        html,
+        message: html,
       }
       window.ReactNativeWebView.postMessage(JSON.stringify(message))
     });

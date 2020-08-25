@@ -13,7 +13,7 @@ const Quill = (props: Props) => {
   const onMessage = (e: WebViewMessageEvent) => {
     const data = JSON.parse(e.nativeEvent.data)
     if (data.type === 'onChange') {
-      props.onChange(data.html)
+      props.onChange(data.message)
     }
   }
   useEffect(() => {
@@ -22,9 +22,7 @@ const Quill = (props: Props) => {
   return (
     <WebView
       onMessage={onMessage}
-      source={
-        Platform.OS === 'ios' ? require('./assets/quill.snow.html') : { uri: 'file:///android_asset/quill.snow.html' }
-      }
+      source={Platform.OS === 'ios' ? require('./assets/quill.html') : { uri: 'file:///android_asset/quill.html' }}
       javaScriptEnabled
       injectedJavaScript={`document.querySelector('#editor').children[0].innerHTML="${props.value}";document.querySelector('.ql-editor').setAttribute("data-placeholder","${props.placeholder}")`}
       style={{ height: Dimensions.get('window').height - 42, width: Dimensions.get('window').width, ...props.style }}
