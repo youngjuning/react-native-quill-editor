@@ -22,3 +22,11 @@ const App = () => {
   return <Quill style={{ height: 300 }} placeholder="请赋诗一首..." onChange={onChange} />
 }
 ```
+
+## Properties
+
+| Name         | Type   | Default                                                                                                                                  | Description                            |
+| ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| defaultValue | string | `""`                                                                                                                                     | Default Vaule（any valid html string） |
+| options      | object | `{placeholder: '请输入...',modules: {toolbar: [[{ header: [1, 2, false] }], ['bold', 'italic', 'underline'], ['image', 'code-block']]}}` |                                        |
+|              |        |                                                                                                                                          |                                        |

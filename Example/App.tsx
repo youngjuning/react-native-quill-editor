@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SafeAreaView, StyleSheet, ScrollView, StatusBar, View } from 'react-native'
 import Quill from 'react-native-quill-wrapper'
 
 const App = () => {
-  const [value, setValue] = useState('')
   const onChange = (html: string) => {
-    setValue(html)
+    console.log(html)
   }
   return (
     <View style={styles.body}>
@@ -14,7 +13,7 @@ const App = () => {
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <Quill
             style={{ height: 300 }}
-            value={value}
+            defaultValue="哈哈哈"
             onChange={onChange}
             options={{
               placeholder: '请赋诗一首...',

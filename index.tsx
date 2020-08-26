@@ -1,25 +1,25 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Dimensions, Platform, ViewStyle } from 'react-native'
 import { WebView, WebViewMessageEvent } from 'react-native-webview'
 
 type Props = {
   style?: ViewStyle
-  value?: string
+  defaultValue?: string
   options?: any
   onChange?: (html: string) => void
 }
 
 const Quill = (props: Props) => {
   const options = JSON.stringify({
-    theme: 'snow',
     placeholder: '请输入...',
     modules: {
       toolbar: [[{ header: [1, 2, false] }], ['bold', 'italic', 'underline'], ['image', 'code-block']],
     },
     ...props.options,
+    theme: 'snow',
   })
   const injectedJavaScriptBeforeContentLoaded = `window.options=${options}`
-  const injectedJavaScript = `document.querySelector('#editor').children[0].innerHTML="${props.value}"`
+  const injectedJavaScript = `document.querySelector('#editor').children[0].innerHTML="${props.defaultValue}"`
 
   const onMessage = (e: WebViewMessageEvent) => {
     const data = JSON.parse(e.nativeEvent.data)
@@ -27,9 +27,6 @@ const Quill = (props: Props) => {
       props.onChange(data.message)
     }
   }
-  // useEffect(() => {
-  //   console.log('[index]', props.value)
-  // }, [props.value])
 
   return (
     <WebView
@@ -45,7 +42,7 @@ const Quill = (props: Props) => {
 
 Quill.defaultProps = {
   style: {},
-  value: '',
+  defaultValue: '',
   onChange: () => {},
   options: {},
 }
