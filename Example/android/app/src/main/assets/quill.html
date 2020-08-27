@@ -979,18 +979,7 @@
   </script>
   <!-- Initialize Quill editor -->
   <script>
-    let options = {
-      theme: 'snow',
-      placeholder: '请输入...',
-      modules: {
-        toolbar: [
-          [{ header: [1, 2, false] }],
-          ['bold', 'italic', 'underline'],
-          ['image', 'code-block']
-        ]
-      },
-    }
-    const quill = new Quill('#editor', options)
+    const quill = new Quill('#editor', window.options)
     quill.on('text-change', function(delta, oldDelta, source) {
       const html = document.querySelector('#editor').children[0].innerHTML
       const message = {
