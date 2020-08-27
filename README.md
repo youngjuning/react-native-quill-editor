@@ -2,6 +2,10 @@
 
 React Native Quill Rich Text Editor Wrapper
 
+## Screenshots
+
+<img src="https://i.loli.net/2020/08/27/LvuyxVr3R2mlk9p.png" style="zoom:30%;" />
+
 ## Install
 
 ```sh
@@ -23,10 +27,11 @@ const App = () => {
 }
 ```
 
-## Properties
+## Props
 
-| Name         | Type   | Default                                                                                                                                  | Description                            |
-| ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| defaultValue | string | `""`                                                                                                                                     | Default Vaule（any valid html string） |
-| options      | object | `{placeholder: '请输入...',modules: {toolbar: [[{ header: [1, 2, false] }], ['bold', 'italic', 'underline'], ['image', 'code-block']]}}` |                                        |
-|              |        |                                                                                                                                          |                                        |
+| Name         | Type                     | Default                                                                                                                                  | Description                            |
+| ------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| defaultValue | string                   | `""`                                                                                                                                     | Default Vaule（any valid html string） |
+| options      | object                   | `{placeholder: '请输入...',modules: {toolbar: [[{ header: [1, 2, false] }], ['bold', 'italic', 'underline'], ['image', 'code-block']]}}` | quill [options](http://t.cn/A64z1U2z)  |
+| style        | ViewStyle                | `{}`                                                                                                                                     | container style                        |
+| onChange     | `(html: string) => void` | `onChange: () => {}`                                                                                                                     | onChange Event                         |
