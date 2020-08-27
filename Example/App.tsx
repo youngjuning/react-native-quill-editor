@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, ScrollView, StatusBar, View } from 'react-native'
-import Quill from 'react-native-quill-wrapper'
+import QuillEditor from 'react-native-quill-editor'
 
 const App = () => {
   const onChange = (html: string) => {
@@ -11,7 +11,7 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <Quill
+          <QuillEditor
             style={{ height: 300 }}
             defaultValue="哈哈哈"
             onChange={onChange}
