@@ -4,7 +4,7 @@ React Native Quill Rich Text Editor Wrapper
 
 ## Screenshots
 
-<img src="https://i.loli.net/2020/08/27/LvuyxVr3R2mlk9p.png" style="zoom:30%;" />
+<img src="https://i.loli.net/2020/08/27/LvuyxVr3R2mlk9p.png" width="300px" />
 
 ## Install
 
