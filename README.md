@@ -25,12 +25,15 @@ const App = () => {
   const onChange = (html: string) => {
     console.log(html)
   }
-  return <QuillEditor
-    style={{ height: 300 }}
-    options={{
-      placeholder: '请赋诗一首...',
-    }}
-    onChange={onChange} />
+  return （
+    <QuillEditor
+      style={{ height: 300 }}
+      options={{
+        placeholder: '请赋诗一首...',
+      }}
+      onChange={onChange}
+   />
+  ）
 }
 ```
 
