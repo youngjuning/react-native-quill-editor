@@ -1,5 +1,7 @@
 # react-native-quill-editor
 
+> 诞生记：https://juejin.cn/post/6867945949788897288
+
 React Native Quill Rich Text Editor Wrapper
 
 ## Screenshots
