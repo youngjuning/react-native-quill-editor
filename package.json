@@ -34,12 +34,9 @@
   "devDependencies": {
     "@types/react": "^16.9.46",
     "@types/react-native": "^0.63.8",
+    "cpy-cli": "^3.1.1",
     "@youngjuning/eslint-config-airbnb": "^0.4.0",
     "lint-staged": "^10.2.11",
     "yorkie": "^2.0.0"
-  },
-  "dependencies": {
-    "cpy-cli": "^3.1.1",
-    "react-native-webview": "^10.7.0"
   }
 }
