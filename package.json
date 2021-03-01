@@ -4,7 +4,7 @@
   "description": "React Native Quill Rich Text Editor Wrapper",
   "main": "./index.tsx",
   "scripts": {
-    "postinstall": "cpy 'assets/quill.html' '../../android/app/src/main/assets/'",
+    "postinstall": "cp 'assets/quill.html' '../../android/app/src/main/assets/'",
     "wml:add": "wml add ./ ./Example/node_modules/react-native-quill-editor/",
     "wml:clean": "watchman watch-del-all",
     "android": "cd ./Example && yarn android && cd ../  && wml start",
